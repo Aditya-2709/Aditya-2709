@@ -22,8 +22,8 @@
 ![ALX](https://img.shields.io/badge/Algothix%20OS-Completed-EEF4EE?style=for-the-badge&labelColor=040705)
 
 <a href="https://algothixos.vercel.app"><img src="https://img.shields.io/badge/Visit-Algothix%20OS-040705?style=flat-square&logo=linux&logoColor=7DFFA8&color=1B2A1F" alt="Algothix OS website"/></a>
-<a href="https://github.com/YOUR_USERNAME"><img src="https://img.shields.io/badge/GitHub-YOUR__USERNAME-040705?style=flat-square&logo=github&logoColor=7DFFA8&color=1B2A1F" alt="GitHub"/></a>
-<a href="https://www.linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-Connect-040705?style=flat-square&logo=linkedin&logoColor=7DFFA8&color=1B2A1F" alt="LinkedIn"/></a>
+<a href="https://github.com/Aditya-2709"><img src="https://img.shields.io/badge/GitHub-YOUR__USERNAME-040705?style=flat-square&logo=github&logoColor=7DFFA8&color=1B2A1F" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/aditya-g-250546451"><img src="https://img.shields.io/badge/LinkedIn-Connect-040705?style=flat-square&logo=linkedin&logoColor=7DFFA8&color=1B2A1F" alt="LinkedIn"/></a>
 <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Say%20hello-040705?style=flat-square&logo=gmail&logoColor=7DFFA8&color=1B2A1F" alt="Email"/></a>
 
 </div>
@@ -114,10 +114,10 @@ Building FixQue       →  a healthcare platform for real patients and providers
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&hide_border=false&bg_color=040705&title_color=7DFFA8&icon_color=7DFFA8&text_color=EEF4EE&border_color=1B2A1F" alt="GitHub stats"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&bg_color=040705&title_color=7DFFA8&text_color=EEF4EE&border_color=1B2A1F" alt="Top languages"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Aditya-2709&show_icons=true&hide_border=false&bg_color=040705&title_color=7DFFA8&icon_color=7DFFA8&text_color=EEF4EE&border_color=1B2A1F" alt="GitHub stats"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aditya-2709&layout=compact&bg_color=040705&title_color=7DFFA8&text_color=EEF4EE&border_color=1B2A1F" alt="Top languages"/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&background=040705&ring=7DFFA8&fire=7DFFA8&currStreakLabel=EEF4EE&sideLabels=EEF4EE&currStreakNum=7DFFA8&sideNums=7DFFA8&dates=8A9A8D&stroke=1B2A1F&border=1B2A1F" alt="Streak stats"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Aditya-2709&background=040705&ring=7DFFA8&fire=7DFFA8&currStreakLabel=EEF4EE&sideLabels=EEF4EE&currStreakNum=7DFFA8&sideNums=7DFFA8&dates=8A9A8D&stroke=1B2A1F&border=1B2A1F" alt="Streak stats"/>
 
 </div>
 
