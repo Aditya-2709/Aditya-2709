@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditya Gawande – Student Founder & Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;900&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+@property --r{syntax:'<length>';inherits:false;initial-value:0px}
+:root{--bg:#040705;--fg:#eef4ee;--mut:#8a9a8d;--line:#1b2a1f;--g:#7dffa8;--card:#08100a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#040705}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 'Inter Tight',system-ui,sans-serif;overflow-x:hidden}
+#bg,#stage{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#bg{z-index:0}#stage{z-index:1}
+main{position:relative;z-index:2}
+section{min-height:100vh;padding:14vh 7vw;display:flex;flex-direction:column;justify-content:center}
+.dot{font-family:'Doto',monospace;font-weight:900;letter-spacing:.02em;line-height:.95;margin:0}
+h1.dot{font-size:clamp(3.4rem,11vw,10rem)}
+h2.dot{font-size:clamp(2.4rem,6vw,5rem);margin-bottom:1.2rem}
+p{max-width:62ch;color:#c4d0c6}
+.lead{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--fg);max-width:46ch}
+.g{color:var(--g)}
+.pn{background:rgba(4,7,5,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line);padding:1.6rem;border-radius:4px;max-width:720px}
+h2.dot,h1.dot{text-shadow:0 0 24px #040705,0 0 8px #040705}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border:1px solid var(--line);color:var(--fg);text-decoration:none;border-radius:2px;font-size:.95rem;transition:.25s;background:rgba(4,7,5,.6)}
+.btn.pri{border-color:var(--g);color:var(--g)}
+.btn:hover,.btn:focus-visible{background:var(--g);color:#031007;border-color:var(--g);outline:none}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.4rem 0 0}
+.roles div{border-top:1px solid var(--line);padding-top:.7rem}
+.roles b{display:block;color:var(--g);font-weight:500;margin-bottom:.2rem}
+.roles span{font-size:.93rem;color:#c4d0c6;line-height:1.55;display:block}
+.card .tag{margin:1.2rem 0 0;font-size:.9rem;color:var(--mut)}
+@media (max-width:760px){.roles{grid-template-columns:1fr}}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 7vw;mix-blend-mode:normal}
+nav b{font-family:'Doto';font-size:1.5rem}
+nav div{display:flex;gap:1.6rem}
+nav a{color:var(--mut);text-decoration:none;font-size:.95rem;transition:color .2s}
+nav a:hover,nav a:focus-visible{color:var(--g);outline:none}
+.hero .sub{margin-top:1.6rem;display:flex;gap:.7rem;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:rgba(4,7,5,.6);backdrop-filter:blur(6px);padding:.35rem .9rem;border-radius:99px;font-size:.9rem;color:var(--fg)}
+.cta{display:inline-block;margin-top:2rem;padding:.9rem 1.6rem;border:1px solid var(--g);color:var(--g);text-decoration:none;border-radius:2px;transition:.25s}
+.cta:hover,.cta:focus-visible{background:var(--g);color:#031007;outline:none}
+.hint{position:absolute;bottom:4vh;left:7vw;color:var(--mut);font-size:.85rem;display:flex;align-items:center;gap:.6rem}
+.hint i{width:6px;height:6px;background:var(--g);border-radius:50%;animation:bob 1.4s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.about{display:grid;grid-template-columns:1fr;gap:2.5rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:640px;margin-top:1rem}
+.facts div{border-top:1px solid var(--line);padding-top:.8rem}
+.facts strong{display:block;font-family:'Doto';font-size:2.4rem;font-weight:900;color:var(--g);line-height:1}
+.facts span{font-size:.85rem;color:var(--mut)}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;max-width:640px}
+.projects{gap:2.5rem}
+.card{position:relative;max-width:780px;background:linear-gradient(160deg,rgba(10,20,13,.97),rgba(4,8,5,.97));border:1px solid var(--line);padding:2rem;border-radius:4px;overflow:hidden;transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--g);transform:translateY(-4px)}
+.card::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(125,255,168,.14) 1px,transparent 1.2px);background-size:10px 10px;-webkit-mask-image:linear-gradient(120deg,transparent 55%,#000);mask-image:linear-gradient(120deg,transparent 55%,#000);pointer-events:none}
+.card h3{font-family:'Doto';font-weight:900;font-size:2.2rem;margin:.9rem 0 .4rem;line-height:1}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--mut)}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--g)}
+.status.live i{animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(125,255,168,.7)}100%{box-shadow:0 0 0 12px rgba(125,255,168,0)}}
+.status.done i{background:transparent;border:2px solid var(--g)}
+.card ul{padding-left:1.1rem;color:#c4d0c6;margin:.8rem 0 0}
+.timeline{border:1px solid var(--line);border-left:1px solid var(--g);background:rgba(4,7,5,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);max-width:640px;margin-top:1rem;padding:1.6rem 1.6rem .2rem 0;border-radius:4px}
+.timeline div{position:relative;padding:0 0 2rem 1.8rem}
+.timeline div::before{content:"";position:absolute;left:-5px;top:.6rem;width:9px;height:9px;border-radius:50%;background:var(--g)}
+.timeline b{display:block;font-weight:500}
+.timeline span{color:var(--mut);font-size:.95rem}
+.contact{align-items:flex-start}
+.links{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1.4rem}
+.links a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--g);padding-bottom:2px}
+.links a:hover{color:var(--g)}
+footer{position:relative;z-index:2;padding:2rem 7vw;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line)}
+/* dot-matrix reveal on scroll */
+.rv{--r:0px;-webkit-mask-image:radial-gradient(circle,#000 var(--r),transparent calc(var(--r) + .6px));mask-image:radial-gradient(circle,#000 var(--r),transparent calc(var(--r) + .6px));-webkit-mask-size:7px 7px;mask-size:7px 7px;opacity:.01;transition:--r 1s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.rv.on{--r:6px;opacity:1}
+.rv.done{-webkit-mask-image:none;mask-image:none}
+@media (max-width:760px){nav div a:not(:last-child){display:none}.facts{grid-template-columns:1fr 1fr 1fr}section{padding:14vh 6vw}}
+@media (prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;--r:6px}html{scroll-behavior:auto}.status.live i,.hint i{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<canvas id="stage"></canvas>
+<nav><b>AG</b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero" id="top">
+  <p class="chip" style="width:fit-content;margin:0 0 1.4rem">Student founder · Developer</p>
+  <h1 class="dot">Aditya<br>Gawande</h1>
+  <p class="lead pn" style="margin-top:1.6rem">I build software that solves real problems, and I run <span class="g">Algothix</span>, the company I started while still a student.</p>
+  <div class="sub"><span class="chip">Founder, Algothix</span><span class="chip">App developer</span><span class="chip">Systems builder</span></div>
+  <a class="cta" href="#projects">See my projects</a>
+  <div class="hint"><i></i>Scroll to explore</div>
+</section>
+
+<section id="about">
+  <h2 class="dot rv">About me</h2>
+  <div class="about">
+    <div class="pn">
+      <p class="lead rv">I’m Aditya, a student who decided not to wait for a degree before building real products.</p>
+      <p class="rv">I started programming out of curiosity and kept going because I enjoy turning an idea into something people can actually use. Today I work across the stack: designing interfaces, writing the logic behind them, and thinking about how the whole system fits together.</p>
+      <p class="rv">As the founder of Algothix, I handle both the technical and the business side: choosing what to build, shipping it, and learning from the people who use it. Being a student and a founder at once has taught me to prioritise, to finish what I start, and to treat every project as a chance to get better.</p>
+      <p class="rv">I care about clean design, fast software and honest engineering. My goal is to grow Algothix into a company known for useful, well-crafted products.</p>
+      <div class="facts rv"><div><strong>2</strong><span>Products built</span></div><div><strong>1</strong><span>Company founded</span></div><div><strong>∞</strong><span>Things to learn</span></div></div>
+      <div class="skills rv"><span class="chip">Mobile & web apps</span><span class="chip">Operating systems</span><span class="chip">UI design</span><span class="chip">Product thinking</span><span class="chip">Entrepreneurship</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2 class="dot rv">Projects</h2>
+  <article class="card rv">
+    <span class="status live"><i></i>Working</span>
+    <h3>FixQue</h3>
+    <p style="margin:0">FixQue is an integrated hospital and clinic platform for appointment booking, patient management, medical records, prescriptions and billing. It connects patients, hospitals, doctors and medical stores in one system, and gives each of them a dedicated portal with role-specific features.</p>
+    <div class="roles">
+      <div><b>Patient</b><span>Registers or logs in, lands on a personal dashboard, discovers hospitals and clinics, reads their details, checks open time slots and books an appointment. The booking goes straight to the provider, and the patient can then pay.</span></div>
+      <div><b>Hospital or clinic</b><span>Registers on a dedicated page and manages everything from a hospital dashboard. All upcoming, completed and cancelled appointments are listed, and each one can be confirmed, cancelled or rescheduled.</span></div>
+      <div><b>Doctor</b><span>Sees the patients of their hospital, including name, age and earlier health records. After a consultation the doctor adds a new record with a prescription, generates a consultation bill for the hospital, and sends the prescription directly to a chosen medical store.</span></div>
+      <div><b>Medical store</b><span>Receives only the medicines prescribed for that patient, never their full medical history. The store then creates its own bill containing just those medicines.</span></div>
+    </div>
+    <p class="tag">Consultation charges and pharmacy charges are billed separately, so each can be handled on its own. Patients see their bills and pay by UPI or card. FixQue digitises the whole patient journey, from finding a provider to booking, consultation, prescription, pharmacy billing and payment.</p>
+    <div class="btns"><a class="btn pri" href="https://github.com/Aditya-2709" target="_blank" rel="noopener">View on GitHub</a></div>
+  </article>
+  <article class="card rv">
+    <span class="status done"><i></i>Completed</span>
+    <h3>Algothix OS</h3>
+    <p style="margin:0">Algothix OS (ALX) is a lightweight Linux distribution based on Debian and made for programmers. It is terminal-first and multi-user, and it is tuned to run smoothly on old laptops with 2 to 4 GB of RAM and a spinning hard drive.</p>
+    <div class="roles">
+      <div><b>Terminal-first</b><span>The command line is the main way to work, so the system stays fast and stays out of the way.</span></div>
+      <div><b>Multi-user</b><span>Several people can have their own accounts and workspaces on the same machine.</span></div>
+      <div><b>Built for old hardware</b><span>Runs well on laptops with 2 to 4 GB of RAM and a hard drive, giving older machines a second life.</span></div>
+      <div><b>Connected workspace</b><span>Several ALX machines can work together and behave like a single workspace.</span></div>
+    </div>
+    <div class="btns"><a class="btn pri" href="https://algothixos.vercel.app" target="_blank" rel="noopener">Visit ALX website</a><a class="btn" href="https://github.com/Aditya-2709/Algothix-OS" target="_blank" rel="noopener">View on GitHub</a></div>
+  </article>
+</section>
+
+<section id="journey">
+  <h2 class="dot rv">Journey</h2>
+  <div class="timeline rv">
+    <div><b>Started coding</b><span>Learned by building small things and breaking them.</span></div>
+    <div><b>Built Algothix OS</b><span>Took on a full operating system and completed it.</span></div>
+    <div><b>Founded Algothix</b><span>Turned personal projects into a company.</span></div>
+    <div><b>Building FixQue</b><span>Working on a booking app for real customers.</span></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="pn"><h2 class="dot rv">Let’s build<br>something.</h2>
+  <p class="rv">Have a project, an idea or a collaboration in mind? I’d like to hear about it.</p>
+  <div class="links rv"><a href="mailto:adityagawande2709@gmail.com">Email me</a><a href="https://github.com/Aditya-2709" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aditya-g-250546451/">LinkedIn</a><a href="https://algothixos.vercel.app" target="_blank" rel="noopener">Algothix OS</a></div></div>
+</section>
+</main>
+<footer>2026 Aditya Gawande · Founder, Algothix</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');setTimeout(()=>e.target.classList.add('done'),1300);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* dot matrix background */
+const bg=document.getElementById('bg'),c=bg.getContext('2d');let W,H,mx=-999,my=-999,sy=0;
+function rs(){const d=Math.min(devicePixelRatio||1,2);W=bg.width=innerWidth*d;H=bg.height=innerHeight*d;c.setTransform(d,0,0,d,0,0)}
+rs();addEventListener('resize',rs);
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY});
+const S=26;
+function drawBg(t){
+ c.clearRect(0,0,innerWidth,innerHeight);
+ const off=(sy*.15)%S;
+ for(let y=-S;y<innerHeight+S;y+=S){for(let x=0;x<innerWidth+S;x+=S){
+  const yy=y+off,dx=x-mx,dy=yy-my,d=Math.sqrt(dx*dx+dy*dy);
+  const wave=reduce?0:Math.sin(x*.01+yy*.01+t*.001)*.5+.5;
+  const near=Math.max(0,1-d/180);
+  const r=1+near*2.6+wave*.5;
+  c.fillStyle=near>.05?`rgba(125,255,168,${.25+near*.75})`:`rgba(190,215,195,${.08+wave*.07})`;
+  c.beginPath();c.arc(x,yy,r,0,6.283);c.fill();
+ }}
+}
+
+/* 3D dot-matrix model */
+const cv=document.getElementById('stage');
+const R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=9;
+const grp=new THREE.Group();sc.add(grp);
+function dotTex(){const k=document.createElement('canvas');k.width=k.height=64;const x=k.getContext('2d');x.fillStyle='#fff';x.beginPath();x.arc(32,32,28,0,6.283);x.fill();return new THREE.CanvasTexture(k)}
+const tex=dotTex();
+const tk=new THREE.TorusKnotGeometry(2,.62,220,36,2,3);
+const pm=new THREE.PointsMaterial({color:0x7dffa8,size:.07,map:tex,transparent:true,alphaTest:.3,depthWrite:false});
+const knot=new THREE.Points(tk,pm);grp.add(knot);
+/* inner sphere of white dots */
+const sg=new THREE.IcosahedronGeometry(1.1,5);
+const sm=new THREE.PointsMaterial({color:0xeef4ee,size:.05,map:tex,transparent:true,alphaTest:.3,depthWrite:false});
+const core=new THREE.Points(sg,sm);grp.add(core);
+/* orbiting ring */
+const rg=new THREE.TorusGeometry(3.4,.02,6,160);
+const ring=new THREE.Points(rg,new THREE.PointsMaterial({color:0xeef4ee,size:.06,map:tex,transparent:true,alphaTest:.3}));
+ring.rotation.x=1.2;grp.add(ring);
+const base=tk.attributes.position.array.slice();
+function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+size();addEventListener('resize',size);
+let prog=0,tp=0,px=0,py=0;
+addEventListener('pointermove',e=>{px=e.clientX/innerWidth-.5;py=e.clientY/innerHeight-.5});
+function onScroll(){sy=scrollY;const m=document.documentElement.scrollHeight-innerHeight;tp=m>0?scrollY/m:0}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+function loop(t){
+ requestAnimationFrame(loop);
+ prog+=(tp-prog)*.06;
+ const mob=innerWidth<760;
+ /* position drifts: right → left → centre as you scroll */
+ const tx=mob?0:Math.cos(prog*Math.PI*2.2)*3.4*(1-prog*.6);
+ const ty=mob?2.4-prog*1.5:Math.sin(prog*Math.PI*3)*.8;
+ grp.position.x+=(tx-grp.position.x)*.08;grp.position.y+=(ty-grp.position.y)*.08;
+ const s=(mob?.55:1)*(1+Math.sin(prog*Math.PI)*.25);grp.scale.setScalar(s);
+ const time=reduce?0:t*.001;
+ knot.rotation.y=time*.25+prog*7;knot.rotation.x=time*.12+prog*3;
+ core.rotation.y=-time*.4;core.rotation.x=time*.2;
+ ring.rotation.z=time*.35+prog*5;
+ grp.rotation.y+=((px*.8)-grp.rotation.y)*.04;grp.rotation.x+=((py*.5)-grp.rotation.x)*.04;
+ /* animated wave through the knot's dots */
+ const p=tk.attributes.position,a=p.array;
+ for(let i=0;i<a.length;i+=3){
+  const w=1+Math.sin(base[i]*1.3+base[i+1]*1.1+time*1.6)*.035+prog*.12*Math.sin(base[i+2]*2+time);
+  a[i]=base[i]*w;a[i+1]=base[i+1]*w;a[i+2]=base[i+2]*w;
+ }
+ p.needsUpdate=true;
+ pm.size=.07+prog*.03;
+ R.render(sc,cam);
+ drawBg(t);
+}
+requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
